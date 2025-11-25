@@ -30,7 +30,6 @@ if ( !e('src/js/vistas')){
 }
 
 //2. variables locales
-localStorage['jappnLastUpdate']=new Date().getTime()
 
 function runModules(){
   console.log("Instalando módulos de Node...")
