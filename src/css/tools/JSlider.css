@@ -1,0 +1,32 @@
+/* JSider
+.JSlider{overflow:hidden;background-color: silver;}
+.JSlider>.wrapper{
+    white-space: nowrap;
+    
+    overflow:show;
+    width:max-content;
+    transform:translateX(0px);
+}
+.JSlider>.wrapper.ajustar{
+    transition:all 0.5s;
+}
+.JSlider>.wrapper>*{
+    display:inline-block;
+    user-select: none
+} */
+
+
+/*JSlider*/
+.JSlider{overflow:hidden;}
+.JSlider>.wrapper{
+    white-space: nowrap;
+    /* overflow-x: auto; */
+    overflow:show;
+    width:max-content;
+
+    transform:translateX(0px);
+}
+.JSlider>.wrapper >*{
+    display:inline-block;
+    user-select: none!important;
+}

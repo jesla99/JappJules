@@ -1,0 +1,84 @@
+.FMenu{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    text-align: center;
+    width:100vw;
+    background-color: #f4f4f4;
+}
+
+.FMenu>div{
+    display:none;
+    position:relative
+}
+.FMenu>div>span{
+    display:block;
+    position:top;
+    height:100px;
+    width:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+.FMenu>div>span>span{
+    position:absolute;
+    background-color: red;
+    padding:10px;
+    color:white;
+    border-radius:50%;
+    left:50%;
+    display:inline-block;
+    vertical-align: middle;
+    margin-top:10px;
+    display:none;
+    cursor:pointer
+}
+.FMenu>div.sel{
+    display:block
+}
+.FMenu>div>div{
+    display:inline-block
+}
+
+.FMenu.FMShow span{
+    display:inline-block
+}
+
+.FMenu button{
+    width:6vw;
+    height:4.5vw;
+    font-size:1vw;
+    vertical-align: top;
+    padding:5px;
+}
+.FMenu button>span{
+    width:100%;
+    display:block;
+    font-size: 0.9vw;
+}
+
+.FMShow>div{
+    display:inline-block
+}
+
+@media (max-width: 550px){
+    /*
+    .FMenu{
+        margin-bottom:-9vw;
+    }
+    .FMenu:hover{
+        margin-bottom:0px
+    }
+        */
+    .FMenu.lock{
+        margin-bottom:0px!important
+    }
+    .FMenu button{
+        width:calc(100% / 6);
+        font-size:3vw;
+        height:12vw
+    }
+    .FMenu button>span{
+        font-size:2.5vw;
+    }
+}

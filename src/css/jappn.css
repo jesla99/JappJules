@@ -1,0 +1,293 @@
+:root{
+    --canvas: white;
+    --blanco: #e5e8fe;
+    --negro: #033061;
+    --gris: #033061;
+    --rojo: #930606;
+}
+
+#preload{
+    position:fixed;
+    top: 0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:none
+}
+
+#root * { box-sizing: border-box;font-family:Arial, Helvetica, sans-serif }
+.col {display:inline-block;vertical-align: top;top:0px}
+/*grid de x unidades*/
+.c1{width:8.33%}
+.c2{width:16.66%}
+.c3{width:25%}
+.c4{width:33.32%}
+.c5{width:41.65%}
+.c6{width:50%}
+.c7{width:58.31%}
+.c8{width:66.64%}
+.c9{width:74.97%}
+.c10{width:83.3%}
+.c11{width:91.63%}
+.c12{width:100%}
+
+
+.wc1{width:8.33vw}
+.wc2{width:16.66vw}
+.wc3{width:25vw}
+.wc4{width:33.32vw}
+.wc5{width:41.65vw}
+.wc6{width:50vw}
+.wc7{width:58.31vw}
+.wc8{width:66.64vw}
+.wc9{width:74.97vw}
+.wc10{width:83.3vw}
+.wc11{width:91.63vw}
+.wc12{width:100vw}
+
+
+.f{
+    width:100%
+}
+
+.nmo{
+    display:none
+}
+
+input, button, select{
+    height:4.5vh;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:5px;
+    border:1px solid gray
+}
+.c{text-align:center}
+.i{text-align: left}
+.d{text-align: right}
+
+.jap_colap{
+    padding-top:10px;
+    padding-bottom:10px;
+    display:block;
+    font-weight: bold;
+}
+
+.jap_edit{
+    padding-left:25px
+}
+.jap_edit:hover,
+.jap_edit:hover>.icon-edit{
+    cursor:pointer;
+}
+
+.jap_edit~.icon-edit{
+    position:absolute;
+    margin-top:-25px;
+    z-index: 1;
+}
+
+.panel{
+    padding:10px
+}
+.fpanel{
+    background-color: #fafafa;
+    border:1px solid gray;
+    border-radius: 5px;
+    padding:10px
+}
+
+._screenDialog{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    z-index:10
+}
+._Dialogo{
+    position:fixed;
+    top:50px;
+    width:400px;
+    height:200px;
+    padding:10px;
+    left:calc(50% - 205px);
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 20px 35px rgba(0, 0, 0, 0.3);
+}
+._Dialogo>div:first-child{
+    position:relative;
+}
+._Dialogo>div:first-child>label{
+    display:block;
+    padding:5px;
+    text-align: center;
+    width:calc(100% - 30px);
+    margin-bottom:10px;
+    color:rgb(185, 185, 185)
+}
+._Dialogo>div:first-child>button{
+    background-color: red;
+    color:white!important;
+    border-radius:0px 5px 0px 5px;
+    margin-top:-10px;
+    margin-right:-10px
+}
+._Dialogo>div:first-child>button{
+    color:gray;
+    border:0px;
+    position:absolute;
+    top:0px;
+    right: 0px;
+}
+._Dialogo>div:nth-child(2){
+    height: calc(100% - 25px);
+    overflow: auto;
+}
+
+._Dialogo.full{
+    width:calc(100vw  - 10px);
+    left:5px;
+    top:10px;
+    height:calc(100vh - 20px)
+}
+
+._Dialogo.medio{
+    width:80vw;
+    height:75vh;
+    left:10vw
+}
+._Dialogo._pie>div:nth-child(2){
+    height: calc(100% - 80px);
+}
+
+._Dialogo>div._pie{
+    position:absolute;
+    bottom:10px;
+    width:calc(100% - 20px);
+    text-align:right
+}
+._Dialogo>div._pie>div>button{
+    margin-left:10px
+}
+._Dialogo>div._pie>div>img{
+    height:50px;
+}
+._Dialogo ._log_,
+._Dialogo ._log_>i{
+    color:red;
+    font-size:1.2rem
+}
+
+._trj>label, 
+._trj>*:nth-child(2){
+    display:block;
+    width:100%
+}
+
+._trj>span:first-child{
+    display:block!important;
+    width:100%
+}
+
+.MetaSelect > select{
+    width:calc(100% - 50px)!important;
+    display:inline-block!important;
+    margin-right:5px
+}
+/*
+.MetaSelect > strong{
+    display:inline-block
+}
+*/
+
+._inpGet>input{
+    width:calc(100% - 41px)!important;
+    display:inline-block!important;
+    border-radius: 5px 0px 0px 5px;
+}
+._inpGet>button{
+    width:40px;
+    display:inline-block!important;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.oculto{
+    display:none
+}
+
+.campo{
+    display:block;
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+/* Estilo para el input */
+.campo {
+    background: linear-gradient(to right, #f09377, #f6d367); /* Ejemplo de degradado naranja a amarillo */
+    padding: 10px;
+    border: none;
+    border-radius: 5px; 
+    color:black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /*transition: background 0.3s ease;*/
+  }
+  
+  /* Estilo para el input cuando tiene el foco */
+  .campo:focus {
+    background: linear-gradient(to right, #f7c358, #f9e74d); /* Degradado naranja más intenso al enfocarse */
+    outline: none;
+  }
+
+  #_galContent_>i{
+    width:20%;
+    display:inline-block;
+    cursor:pointer;
+    padding:4px;
+    border-radius:5px;
+    position:relative
+  }
+  #_galContent_>i:hover{
+    background-color: #f4f4f4;
+  }
+  #_galContent_>i.sel{
+    background-color: gray;
+    color:white
+  }
+  #_galContent_>i>span{
+    display:none; 
+    color:white;
+    background-color: black;
+    position:absolute;
+    top:0px;
+    right:0px;
+    padding:4px;
+    padding-left:5px;
+    border-radius:0px 5px 5px 0px;
+  }
+  #_galContent_>i.sel>span{
+    display:inline-block;
+  }
+
+
+  @media (max-width: 768px) {
+    .nmo{
+        display:initial
+    }
+    .nmv{
+        display:none!important
+    }
+    .col{
+        width:100%
+    }
+    .wcol{width:100vw}
+    ._Dialogo.medio{
+        width:calc(100vw  - 10px);
+        left:5px;
+        top:10px;
+        height:calc(100vh - 20px)
+    }
+  }

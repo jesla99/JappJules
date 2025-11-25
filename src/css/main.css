@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    overscroll-behavior-x: none; /* Desactiva el desplazamiento horizontal */
+    overscroll-behavior-y: auto; /* Permite el desplazamiento vertical normal */
+  }
+.hide{display:none!important}
+.suave{
+    transition: all 0.3s ease-in-out; /* Animación de la propiedad left durante 0.3 segundos con una función de tiempo ease-in-out */
+}
+
+/*Para acordion vertical*/
+.jsx_VAcordion {
+    display:flex!important;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    min-width:100px;
+    min-height: 100px;
+} 
+.jsx_VAcordion>div {
+    display:block;
+    height: 30px; /* Altura fija para los divs */
+    border:1px solid silver;
+    transition:all 0.2s;
+    overflow:hidden;
+    padding-bottom:10px;
+}
+.jsx_VAcordion>div:first-child{
+    border-radius:6px 6px 0px 0px
+}
+.jsx_VAcordion>div:last-child{
+    border-radius:0px 0px 6px 6px
+}
+.jsx_VAcordion>div>span{
+    display:block;
+    padding:5px;
+    background-color: #f4f4f4;
+    cursor:pointer;
+    border-bottom:3px double silver
+}
+.jsx_VAcordion>div.sel>span{
+    font-weight: bold;
+    background-color: silver;
+}
+.jsx_VAcordion>div>div{
+    display:block;
+    height:calc(100% - 100px);
+    overflow: auto;
+}
+.jsx_VAcordion>div.sel {
+    height: auto;
+    flex-grow: 1; /* Este div ocupa el espacio restante */
+    border-left:4px solid black;
+    overflow:auto;
+}
+
+.jsx_VAcordion>div>div{
+    height:auto;
+}
+
+
+/** jsx_JSlider */
+div.jsx_JSlider{
+    position:relative;
+    min-width: 100px; /* Ancho fijo del contenedor principal */
+    min-height: 30px;
+    max-width:100vw;
+    height: auto; /* Alto fijo del contenedor principal */
+    
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    border:1px solid silver;
+    user-select: none;
+}
+
+div.jsx_JSlider>div{
+    display:flex!important;
+    flex-direction: row!important;
+    min-height: 30px;
+    position:absolute;    
+    white-space: nowrap; /* Evita que los elementos se ajusten a varias líneas */
+}
+    
+div.jsx_JSlider>div>* {
+    vertical-align: top;
+    top:0px;
+    margin-right: 10px;
+    /*padding: 10px;*/
+    text-align: center;
+    color:black;
+}
+
+.item{
+    padding:5px;
+    padding-left:20px;
+    border:1px solid white;
+    border-radius:5px
+}
+
+.item:hover{
+    border:1px solid silver
+}
+
+
+._kanban{
+    border:1px solid silver;
+    border-radius:5px;
+    display:flex;
+    flex-direction: row;
+    height:250px;
+    max-height: 100vh;
+    overflow: hidden;
+    font-size: 0.8rem;
+    background-color: gray;
+}
+/*Columna*/
+._kanban>div{
+    width:100%;
+    height:100%;
+    border:1px solid #e0e0e0;
+    /*background-color: #Fafafa;*/
+}
+/*Titulo de columna*/
+._kanban>div>div:first-child{
+    color:gray;
+    padding:10px;
+    border-bottom:1px solid #e0e0e0;
+    background-color: #Fafafa;
+    position:relative;
+    padding-right:18px;
+    border-right:3px double #cecece
+}
+/*contenido de la columna*/
+._kanban>div>div:last-child{
+    height:calc(100% - 35px);
+    overflow: auto;
+    background-color: #Fafafa;
+}
+/*Items de la columna*/
+._kdrag{
+    border:1px solid silver;
+    padding:5px;
+    min-height:90px;
+    margin:4px;
+    border-radius:5px;
+    background-color: white;
+    
+}
+div._kdrag.arrastrando{
+    border:1px solid red!important;
+    cursor:grabbing
+}
+/*** Colapas columna **/
+._kanColap{
+    width:30px!important;
+    min-width:30px!important;
+    position:relative;
+    overflow: hidden;
+}
+
+._kanColap>div{
+    transform: rotate(90deg);
+    position:absolute;
+    left:0px;
+    top:0px;
+    height: 55;
+    top:80px;
+
+    width:200px;
+    left:-90px;
+
+    white-space: nowrap;     /* Fuerza una sola línea */
+  overflow: hidden;        /* Oculta el texto que se sale (opcional) */
+  text-overflow: clip;
+}
+
+/**Estilo para JPanel **/
+._JPanel-principal {
+    display: flex;
+    width: 100%;
+    border: 2px solid #333;
+    padding: 0px;
+    box-sizing: border-box;
+    gap: 0px;
+    min-width: 0; /* Permite que flex funcione bien */
+    overflow-x: auto; /* Scroll si excede */
+    background-color:gray
+}
+
+._JPanel-columna {
+    border-right:1px solid gray;
+    padding: 0px;
+    text-align: center;
+    min-height: 150px;
+    position: relative;
+    white-space: normal;
+    background-color: white;
+}
+
+._JPanel-columna>div{
+    display:block;
+    flex: none;
+}
+
+/* Columnas FIJAS (todas menos la última) */
+._JPanel-columna.fija {
+    flex: 0 0 auto; /* Ancho fijo */
+}
+
+/* Última columna: ocupa el resto */
+._JPanel-columna.flexible {
+    flex: 1 1 25px; /* Crece, se encoge, base 150px */
+    min-width: 25px;
+    background-color: white;
+}
+
+._JPanel-resizer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    cursor: col-resize;
+    background: transparent;
+    z-index: 10;
+}
+
+._JPanel-resizer:hover {
+    background: rgba(0, 123, 255, 0.3);
+}
+
+._JPanel-columna.dragging .resizer {
+    background: #007bff;
+}
+
+._JPanel-colap{
+    width:30px!important;
+    min-width:30px!important;
+    position:relative;
+    overflow: hidden;
+}
+
+
+/*JLogin*/
+
+._JLogin{
+    border:1px solid #dadada;
+    border-radius: 10px;
+    padding:10px;
+    background-color: #fafafa;
+}

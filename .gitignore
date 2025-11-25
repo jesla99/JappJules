@@ -1,0 +1,15 @@
+src/js/local
+src/js/local/*
+#src/js/vistas
+#src/js/vistas/*
+#src/js/vistas/*/*
+#src/js/Config.tsx
+package-lock.json
+node_modules
+node_modules/*
+dist
+dist/*
+.vscode
+.DS_Store
+._watchIndex.json
+

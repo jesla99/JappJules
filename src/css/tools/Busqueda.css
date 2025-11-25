@@ -1,0 +1,13 @@
+.t_busqueda>input{
+    width:calc(100% - 50px);
+    border-radius:5px 0px 0px 5px;
+    padding:20px;
+    vertical-align: top;
+}
+
+.t_busqueda>button{
+    border-radius: 0px 5px 5px 0px;
+    cursor:pointer;
+    line-height: 41px;
+    height: 42px;
+}

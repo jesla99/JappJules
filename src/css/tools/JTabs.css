@@ -1,0 +1,40 @@
+.JTabsContent{
+  border-top:1px solid gray;
+  margin-top: -1px;
+}
+/*.JTabs *{background-color: var(--canvas)}*/
+.JTabsContent>div{
+  padding:10px;
+  height: 100%;
+  /*background-color: var(--blanco);*/
+}
+
+.JTabs .tabs>div{
+    margin-top:4px;
+    /*background-color: var(--canvas);*/
+    padding:6px;
+    border-top:2px solid rgba(255,255,255,0);
+    color:gray;
+}
+.JTabs .tabs>div>span{
+  font-size: 0.8rem;
+}
+.JTabs.mini .tabs>div>span{
+  display:none
+}
+.JTabs .tabs>div.tabSel{
+  position:relative; /*necesario para la siguiente regla CSS*/
+    border-top:2px solid var(--rojo);
+    /*background-color: var(--blanco);*/
+    border-bottom:1px solid white;
+    color:black
+}
+.JTabs .tabs>div.tabSel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px; /* Grosor del borde */
+  height: 50%;
+  background-color: black;
+}

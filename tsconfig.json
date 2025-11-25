@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "jsx": "react",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "isolatedModules": false
+  },
+  "include": ["src/**/*"]
+}
