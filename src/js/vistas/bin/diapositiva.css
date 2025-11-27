@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    width: 200px;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+}
+
+.center-panel-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.toolbar {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.center-panel {
+    flex-grow: 1;
+    padding: 10px;
+    position: relative; /* Needed for positioning elements inside */
+}
+
+.right-panel {
+    width: 200px;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+}
+
+.slide {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
