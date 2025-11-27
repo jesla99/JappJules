@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    width: 200px;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+}
+
+.center-panel-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.toolbar {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.center-panel {
+    flex-grow: 1;
+    padding: 10px;
+    position: relative; /* Needed for positioning elements inside */
+    background-color: #f0f0f0; /* A light background for the whole panel */
+}
+
+.right-panel {
+    width: 200px;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+}
+
+.slide {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.slide-canvas {
+    border: 1px solid #ccc;
+    background-color: white;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.property-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.property-form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.property-form input,
+.property-form textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
