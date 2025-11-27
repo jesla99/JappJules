@@ -3,10 +3,10 @@ import JappN from '../libs/JappN.js'
 
 class Diapositiva extends JappN {
     alCargar(props) {
-        const title = props.title || 'Diapositiva sin título';
+        const nombre = props.nombre || 'Diapositiva sin nombre';
         return (
             <div class="slide">
-                {title}
+                {nombre}
             </div>
         )
     }
